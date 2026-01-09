@@ -1,10 +1,11 @@
-# BookMySpecialist - Appointment Booking System
+<img width="1885" height="941" alt="image" src="https://github.com/user-attachments/assets/607563c3-bf8f-44b3-b717-9472b05aa37a" /># BookMySpecialist - Appointment Booking System
 
 A modern, responsive web application for booking specialist appointments with an admin panel for managing bookings.
 
 ## 📸 Application Preview
 
-![BookMySpecialist Screenshot](assets/images/screenshot.png)
+![BookMySpecialist Screenshot](<img width="1885" height="941" alt="image" src="https://github.com/user-attachments/assets/bcce0cb7-58d8-49b9-b017-35303cb58ba5" />
+)
 
 *Note: Add your application screenshot as `screenshot.png` in the `assets/images/` folder*
 
@@ -190,3 +191,4 @@ This project is for educational and demonstration purposes. Feel free to modify 
 **Version**: 1.0  
 **Last Updated**: January 2026  
 **Framework**: Custom PHP/JavaScript application
+
