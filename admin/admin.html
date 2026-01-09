@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="../includes/styles.css">
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: 'Inter', sans-serif;
+            padding: 2rem;
+        }
+        .admin-container {
+            max-width: 500px;
+            margin: auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 0 12px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        input[type="password"] {
+            padding: 0.5rem;
+            width: 80%;
+            margin: 1rem 0;
+            font-size: 1rem;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+        button {
+            padding: 0.5rem 1rem;
+            background-color: #4b154a;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #300d2f;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="admin-container">
+        <h2>Admin Login</h2>
+        <p>Please Confirm the admin password to continue:</p>
+        <input type="password" id="adminPass" placeholder="Enter password" />
+        <br>
+        <button onclick="checkPassword()">Submit</button>
+    </div>
+
+    <script>
+        function checkPassword() {
+            const input = document.getElementById('adminPass').value;
+            const correctPassword = 'admin123'; // You can change this
+
+            if (input === correctPassword) {
+                window.location.href = 'admin_auth.php';
+            } else {
+                alert('Incorrect password. Please try again.');
+            }
+        }
+    </script>
+</body>
+</html>

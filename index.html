@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BookMySpecialist</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="includes/styles.css" />
+</head>
+<body>
+  <header>
+  <div class="header-bar updated-header">
+    <div class="header-left">
+      <img src="assets/images/logo.png" alt="Logo" class="logo" />
+    </div>
+    <div class="header-center">
+      <h1 class="site-title">  BookMySpecialist</h1>
+    </div>
+    <div class="header-right">
+      <button id="helpBtn" class="header-btn">Help</button>
+      <button onclick="adminLogin()" id="adminBtn" class="header-btn">Admin</button>
+    </div>
+  </div> 
+  <p class="subtitle">Easily choose your specialist and schedule an appointment instantly</p>
+</header>
+
+
+  <main class="departments">
+    <!-- PHYSICAL HEALTH DEPT -->
+    <section class="department">
+      <h2>Physical Health Department</h2>
+      <div class="specialty">
+        <label for="cardiology">Cardiology</label>
+        <select id="cardiology">
+          <option disabled selected>Select a Doctor here</option>
+          <option>Dr. Smith – 9AM-12PM</option>
+          <option>Dr. Patel – 1PM-4PM</option>
+          <option>Dr. Lee – 4PM-7PM</option>
+        </select>
+        <button class="book-btn">Book Now</button>
+      </div>
+
+      <div class="specialty">
+        <label for="orthopedics">Orthopedics</label>
+        <select id="orthopedics">
+          <option disabled selected>Select a Doctor here</option>
+          <option>Dr. Adams – 10AM-1PM</option>
+          <option>Dr. White – 2PM-5PM</option>
+          <option>Dr. Green – 6PM-9PM</option>
+        </select>
+        <button class="book-btn">Book Now</button>
+      </div>
+
+      <div class="specialty">
+        <label for="dermatology">Dermatology</label>
+        <select id="dermatology">
+          <option disabled selected>Select a Doctor here</option>
+          <option>Dr. Rose – 8AM-11AM</option>
+          <option>Dr. Snow – 12PM-3PM</option>
+          <option>Dr. Hill – 4PM-6PM</option>
+        </select>
+        <button class="book-btn">Book Now</button>
+      </div>
+    </section>
+
+    <!-- MENTAL WELLNESS DEPT -->
+    <section class="department">
+      <h2>Mental Wellness Department</h2>
+
+      <div class="specialty">
+        <label for="psychiatry">Psychiatry</label>
+        <select id="psychiatry">
+          <option disabled selected>Select a Doctor here</option>
+          <option>Dr. Ahmed – 10AM-1PM</option>
+          <option>Dr. Chan – 2PM-5PM</option>
+          <option>Dr. Kumar – 6PM-9PM</option>
+        </select>
+        <button class="book-btn">Book Now</button>
+      </div>
+
+      <div class="specialty">
+        <label for="psychology">Psychology</label>
+        <select id="psychology">
+          <option disabled selected>Select a Doctor here</option>
+          <option>Dr. Hope – 8AM-10AM</option>
+          <option>Dr. Gray – 12PM-3PM</option>
+          <option>Dr. Stone – 4PM-6PM</option>
+        </select>
+        <button class="book-btn">Book Now</button>
+      </div>
+
+      <div class="specialty">
+        <label for="therapy">Therapy & Counseling</label>
+        <select id="therapy">
+          <option disabled selected>Select a Doctor here</option>
+          <option>Dr. Clark – 9AM-11AM</option>
+          <option>Dr. Taylor – 1PM-3PM</option>
+          <option>Dr. Quinn – 5PM-7PM</option>
+        </select>
+        <button class="book-btn">Book Now</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="includes/script.js"></script>
+  
+</body>
+</html> 

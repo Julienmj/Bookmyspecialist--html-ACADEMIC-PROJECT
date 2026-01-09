@@ -1,0 +1,317 @@
+/* CSS */
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  background-image: url('../assets/images/background3.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  color: #141414;
+}
+
+header {
+  background-image: url('../assets/images/background2.jpg');
+  color: #141414;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 0.1rem 1rem;
+}
+
+/* Updated header layout */
+.header-bar {
+ display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.1rem 1rem; /* Decreased padding */
+  min-height: 50px; /* Reduced height */
+}
+
+.header-left .logo {
+ 
+  width: 80px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.header-center .site-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #004080;
+  text-shadow: 1px 1px 2px #aaa;
+  margin: 0;
+  text-align: center;
+  width: 100%;
+}
+
+.header-right {
+  display: flex;
+  gap: 10px;
+}
+
+.header-btn {
+  background-color: #4b154a;
+  color: white;
+  font-weight: bold;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.header-btn:hover {
+  background-color: #660e5c;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #333;
+  margin-top: 10px;
+}
+
+/* Existing styles */
+.logo-table {
+  margin-right: 1rem;
+}
+
+.logo-img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.taskbar {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.taskbar-btn {
+  background-color: #4b154a;
+  color: #dbd2ee;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 300px;
+  text-align: center;
+}
+
+.modal-content input {
+  display: block;
+  margin: 1rem auto;
+  padding: 0.5rem;
+  width: 90%;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.hidden {
+  display: none;
+}
+
+main.departments {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 1rem;
+  min-height: 75vh; 
+}
+
+.department {
+  flex: 1 1 350px;
+  max-width: 450px;
+  background: #c5c4c4;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
+  color: #141414;
+  min-height: 250px;
+}
+
+.department:hover {
+  transform: translateY(-4px);
+}
+
+.department h2 {
+  color: #141414;
+  border-bottom: 2px solid #c8c4c4;
+  padding-bottom: 0.3rem;
+  margin-bottom: 0.8rem;
+  font-size: 1.2rem;
+}
+
+.specialty {
+  background: #eae9e9;
+  padding: 0.75rem;
+  margin-bottom: 0.75rem;
+  border-radius: 12px;
+  box-shadow: inset 0 0 4px rgba(0,0,0,0.05);
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  color: #141414;
+  font-size: 0.95rem;
+}
+
+select {
+  width: 100%;
+  padding: 0.4rem;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  border: 1px solid #abadee;
+  background-color: #9fa2f1;
+  color: #141414;
+}
+
+.book-btn {
+  margin-top: 0.5rem;
+  background-color: #4b154a;
+  color: #dbd2ee;
+  border: none;
+  border-radius: 6px;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+}
+
+.book-btn:hover {
+  background-color: #970106;
+}
+
+/* Modal Styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 500px;
+}
+
+.modal-content h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.modal-content label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
+
+.modal-buttons {
+  text-align: center;
+}
+
+.modal-buttons button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header-bar {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  
+  .header-center {
+    order: -1;
+    margin-bottom: 1rem;
+  }
+  
+  .site-title {
+    font-size: 1.5rem;
+  }
+  
+  .departments {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .department {
+    width: 90%;
+    max-width: none;
+  }
+  
+  .modal-content {
+    width: 90%;
+    margin: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-right {
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .header-btn {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+  
+  .specialty {
+    padding: 0.5rem;
+  }
+  
+  .book-btn {
+    padding: 0.6rem;
+    font-size: 0.9rem;
+  }
+}

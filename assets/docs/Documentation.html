@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Documentation - BOOKING APPOINTMENT WEBPAGE</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      font-family: 'Quicksand', Arial, sans-serif;
+      background: linear-gradient(120deg, #e0c3e6 0%, #f7e9fa 100%);
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+    }
+    .doc-container {
+      max-width: 950px;
+      margin: 2.5rem auto;
+      background: rgba(255,255,255,0.98);
+      border-radius: 32px;
+      box-shadow: 0 8px 40px rgba(75,21,74,0.13);
+      padding: 2.5rem 2.5rem 2.5rem 2.5rem;
+      border: 3px solid #b39ddb;
+      position: relative;
+      overflow: hidden;
+      animation: fadeIn 1.2s;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(40px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+    .cover-card {
+      text-align: center;
+      padding: 2.5rem 1rem 2rem 1rem;
+      border-radius: 20px;
+      background: linear-gradient(90deg, #e0c3e6 0%, #f7e9fa 100%);
+      margin-bottom: 2.5rem;
+      box-shadow: 0 4px 24px rgba(75,21,74,0.10);
+      position: relative;
+    }
+    .cover-title {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 2.7rem;
+      font-weight: 900;
+      color: #4b154a;
+      margin-bottom: 0.3rem;
+      letter-spacing: 2px;
+      text-shadow: 2px 2px 8px #e0c3e6;
+      text-transform: uppercase;
+      animation: popIn 1s;
+    }
+    @keyframes popIn {
+      from { opacity: 0; transform: scale(0.8);}
+      to { opacity: 1; transform: scale(1);}
+    }
+    .project-name {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 1.7rem;
+      font-weight: 700;
+      color: #007bff;
+      margin-bottom: 1.1rem;
+      letter-spacing: 1.5px;
+      text-shadow: 1px 1px 6px #e0c3e6;
+    }
+    .cover-card img {
+      width: 110px;
+      height: 90px;
+      object-fit: contain;
+      margin-bottom: 0.5rem;
+      filter: drop-shadow(0 4px 12px #b39ddb);
+      animation: logoBounce 1.2s;
+    }
+    @keyframes logoBounce {
+      0% { transform: scale(0.7);}
+      60% { transform: scale(1.15);}
+      100% { transform: scale(1);}
+    }
+    .logo-label {
+      font-size: 1.1em;
+      color: #555;
+      margin-bottom: 1.2rem;
+      font-style: italic;
+      letter-spacing: 0.5px;
+      font-family: 'Quicksand', Arial, sans-serif;
+    }
+    .cover-info {
+      font-size: 1.18rem;
+      color: #333;
+      margin-bottom: 0.2rem;
+      font-family: 'Quicksand', Arial, sans-serif;
+      letter-spacing: 0.5px;
+    }
+    .languages {
+      margin-top: 1.2rem;
+      font-size: 1.13rem;
+      color: #007bff;
+      font-weight: 700;
+      font-family: 'Montserrat', Arial, sans-serif;
+      letter-spacing: 1px;
+    }
+    .section-title {
+      color: #fff;
+      background: linear-gradient(90deg, #4b154a 60%, #007bff 100%);
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 1.5em;
+      margin-top: 2.5em;
+      margin-bottom: 1em;
+      font-weight: 900;
+      letter-spacing: 1.5px;
+      border-radius: 8px;
+      padding: 0.5em 1em;
+      display: inline-block;
+      box-shadow: 0 2px 8px #e0c3e6;
+      animation: fadeIn 1.2s;
+    }
+    .section-content {
+      margin-bottom: 2em;
+      color: #222;
+      font-size: 1.18em;
+      font-family: 'Quicksand', Arial, sans-serif;
+      line-height: 1.7;
+      padding-left: 0.5em;
+      padding-right: 0.5em;
+      animation: fadeIn 1.2s;
+    }
+    .section-content ul {
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+      padding-left: 1.5em;
+    }
+    .section-content li {
+      margin-bottom: 0.7em;
+    }
+    .diagram-card {
+      background: #f7f7fa;
+      border-radius: 16px;
+      padding: 2rem 1rem 1.5rem 1rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      text-align: center;
+      margin-bottom: 2.5rem;
+      animation: fadeIn 1.2s;
+    }
+    .diagram-img {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      margin: 0 auto 1rem auto;
+      display: block;
+      border-radius: 14px;
+      border: 3px solid #b39ddb;
+      background: #fff;
+      box-shadow: 0 2px 12px #e0c3e6;
+    }
+    .slider-card {
+      background: #f7f7fa;
+      border-radius: 16px;
+      padding: 2rem 1rem 1.5rem 1rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      text-align: center;
+      margin-bottom: 2.5rem;
+      position: relative;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      animation: fadeIn 1.2s;
+      min-height: 320px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .slider-images {
+      display: flex;
+      overflow: hidden;
+      border-radius: 12px;
+      height: 320px;
+      background: #e0c3e6;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 8px #b39ddb;
+      width: 100%;
+      min-width: 0;
+    }
+    .slider-images img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: none;
+      transition: opacity 0.5s;
+      border-radius: 12px;
+    }
+    .slider-images img.active {
+      display: block;
+    }
+    .slider-controls {
+      margin-top: 1.2rem;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+    }
+    .slider-btn {
+      background: linear-gradient(90deg, #4b154a 60%, #007bff 100%);
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 44px;
+      height: 44px;
+      font-size: 1.4rem;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+      box-shadow: 0 2px 8px #b39ddb;
+    }
+    .slider-btn:hover {
+      background: #007bff;
+      transform: scale(1.12);
+    }
+    .conclusion-section {
+      margin: 2.5em 0 1.5em 0;
+      padding: 0;
+      font-family: 'Quicksand', Arial, sans-serif;
+      animation: fadeIn 1.2s;
+    }
+    .conclusion-title {
+      color: #4b154a;
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 1.3em;
+      font-weight: bold;
+      margin-bottom: 0.7em;
+      letter-spacing: 1px;
+    }
+    .conclusion-list {
+      background: linear-gradient(90deg, #e6ffe6 70%, #b2f7ef 100%);
+      border-left: 7px solid #1a7f1a;
+      padding: 1.3em 1.5em;
+      border-radius: 12px;
+      color: #1a7f1a;
+      font-weight: 600;
+      font-size: 1.08em;
+      box-shadow: 0 2px 8px #b2f7ef;
+      margin-bottom: 0.5em;
+    }
+    .back-link {
+      display: inline-block;
+      margin-top: 2.5rem;
+      text-decoration: none;
+      color: #fff;
+      background: linear-gradient(90deg, #4b154a 60%, #007bff 100%);
+      padding: 14px 32px;
+      border-radius: 10px;
+      font-weight: bold;
+      transition: background 0.2s, transform 0.2s;
+      box-shadow: 0 2px 8px #b39ddb;
+      font-size: 1.18em;
+      letter-spacing: 1px;
+      font-family: 'Montserrat', Arial, sans-serif;
+    }
+    .back-link:hover {
+      background: #007bff;
+      color: #fff;
+      transform: scale(1.07);
+    }
+    @media (max-width: 700px) {
+      .doc-container {
+        padding: 1rem 0.5rem;
+      }
+      .cover-title {
+        font-size: 1.3rem;
+      }
+      .slider-card {
+        padding: 1rem 0.2rem 1rem 0.2rem;
+        min-height: 180px;
+      }
+      .slider-images, .slider-images img {
+        height: 180px;
+      }
+      .diagram-card {
+        padding: 1rem 0.2rem 1rem 0.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="doc-container">
+    <!-- COVER / TITLE -->
+    <div class="cover-card">
+      <div class="cover-title">BOOKING APPOINTMENT WEBPAGE</div>
+      <div class="project-name">BookMySpecialist</div>
+      <img src="logo.png" alt="Project Logo">
+      <div class="logo-label">BookMySpecialist Logo</div>
+      <div class="cover-info"><b>Name:</b> Mugisha Julien</div>
+      <div class="cover-info"><b>Reg No:</b> 26967</div>
+      <div class="cover-info"><b>Course:</b> Web Design</div>
+      <div class="cover-info"><b>Project:</b> Booking Appointment Webpage</div>
+      <div class="languages">
+        <span>Languages Used: HTML, CSS, JavaScript, PHP, MySQL</span>
+      </div>
+    </div>
+
+    <!-- BRIEF INTRODUCTION -->
+    <div class="section-title">Introduction</div>
+    <div class="section-content">
+      BookMySpecialist is a website that helps people book appointments with medical specialists easily. Users can choose a department, pick a doctor, and select a time for their visit. The system is simple to use and works on any device.
+    </div>
+
+    <!-- PROBLEM STATEMENT -->
+    <div class="section-title">Problem Statement</div>
+    <div class="section-content">
+      Many patients find it hard to book appointments with specialists. They may wait a long time, not know which doctors are available, or have to deal with confusing paperwork. This can cause missed appointments and stress for both patients and doctors.
+    </div>
+
+    <!-- OBJECTIVES -->
+    <div class="section-title">Objectives</div>
+    <div class="section-content">
+      <ul>
+        <li>Make it easy for anyone to book an appointment online.</li>
+        <li>Reduce waiting times and make scheduling faster.</li>
+        <li>Show users which doctors and times are available right now.</li>
+        <li>Give admins tools to manage all appointments.</li>
+        <li>Help patients have a better and smoother experience.</li>
+      </ul>
+    </div>
+
+    <!-- DIAGRAM - DATA FLOW DIAGRAM -->
+    <div class="section-title">Data Flow Diagram</div>
+    <div class="diagram-card">
+      <img src="chartflow.png" alt="Data Flow Diagram" class="diagram-img">
+      <div style="color:#555; font-size:1.08em; margin-top:0.7em;">
+        <b>Legend:</b> <br>
+        User → Webpage → Database → Admin Panel → User
+      </div>
+    </div>
+
+    <!-- SCREENSHOTS SLIDER -->
+    <div class="section-title">Screenshots</div>
+    <div class="slider-card">
+      <div class="slider-images" id="sliderImages">
+        <img src="pic1.png" alt="Screenshot 1" class="active">
+        <img src="pic2.png" alt="Screenshot 2">
+        <img src="pic3.png" alt="Screenshot 3">
+        <img src="pic4.png" alt="Screenshot 4">
+        <img src="pic5.png" alt="Screenshot 5">
+        <img src="pic6.png" alt="Screenshot 6">
+        <img src="pic7.png" alt="Screenshot 7">
+        <img src="pic8.png" alt="Screenshot 8">
+        <img src="pic9.png" alt="Screenshot 9">
+        <!-- Add more images as needed -->
+      </div>
+      <div class="slider-controls">
+        <button class="slider-btn" id="prevBtn">&#8592;</button>
+        <button class="slider-btn" id="nextBtn">&#8594;</button>
+      </div>
+      <div style="color:#888; font-size:1em; margin-top:0.7em;">
+      </div>
+    </div>
+
+    <!-- CONCLUSION -->
+    <div class="section-title">Conclusion</div>
+    <div class="conclusion-section">
+      <div class="conclusion-title">What We Learned</div>
+      <div class="conclusion-list">
+        <ul>
+          <li>Online booking makes it much easier for patients to get appointments.</li>
+          <li>Admins can quickly see and manage all bookings in one place.</li>
+          <li>Clear information and simple steps help users avoid mistakes.</li>
+          <li>Using web technology saves time for both patients and doctors.</li>
+        </ul>
+        <div style="margin-top:1em;">
+          <b>In short:</b> BookMySpecialist helps everyone spend less time booking and more time getting care.
+        </div>
+      </div>
+    </div>
+
+    <!-- BACK LINK -->
+    <a class="back-link" href="bookmyspecialist.php">&larr; Back to Main Page</a>
+  </div>
+  <script>
+    // Automated and manual slider logic for screenshots
+    const images = document.querySelectorAll('#sliderImages img');
+    let current = 0;
+    let sliderInterval = setInterval(nextSlide, 3000);
+
+    function showSlide(idx) {
+      images.forEach((img, i) => img.classList.toggle('active', i === idx));
+    }
+    function nextSlide() {
+      images[current].classList.remove('active');
+      current = (current + 1) % images.length;
+      images[current].classList.add('active');
+    }
+    function prevSlide() {
+      images[current].classList.remove('active');
+      current = (current - 1 + images.length) % images.length;
+      images[current].classList.add('active');
+    }
+    document.getElementById('prevBtn').onclick = function() {
+      clearInterval(sliderInterval);
+      prevSlide();
+      sliderInterval = setInterval(nextSlide, 3000);
+    };
+    document.getElementById('nextBtn').onclick = function() {
+      clearInterval(sliderInterval);
+      nextSlide();
+      sliderInterval = setInterval(nextSlide, 3000);
+    };
+  </script>
+</body>
+</html>
