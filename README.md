@@ -4,7 +4,7 @@ A modern, responsive web application for booking specialist appointments with an
 
 ## 📸 Application Preview
 
-![BookMySpecialist Screenshot](<img width="1885" height="941" alt="image" src="https://github.com/user-attachments/assets/bcce0cb7-58d8-49b9-b017-35303cb58ba5" />
+<img width="1885" height="941" alt="image" src="https://github.com/user-attachments/assets/bcce0cb7-58d8-49b9-b017-35303cb58ba5" />
 )
 
 *Note: Add your application screenshot as `screenshot.png` in the `assets/images/` folder*
@@ -191,4 +191,5 @@ This project is for educational and demonstration purposes. Feel free to modify 
 **Version**: 1.0  
 **Last Updated**: January 2026  
 **Framework**: Custom PHP/JavaScript application
+
 
